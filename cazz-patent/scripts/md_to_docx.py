@@ -165,7 +165,7 @@ _SYMBOLS = {
     "triangle": "△", "bigtriangleup": "△", "bigtriangledown": "▽",
     "Box": "□", "Diamond": "◇",
     # Relations
-    "leq": "≤", "geq": "≥", "neq": "≠", "equiv": "≡",
+    "leq": "≤", "le": "≤", "geq": "≥", "ge": "≥", "neq": "≠", "ne": "≠", "equiv": "≡",
     "approx": "≈", "sim": "∼", "simeq": "≃", "cong": "≅",
     "propto": "∝", "parallel": "∥", "perp": "⊥",
     "ll": "≪", "gg": "≫", "prec": "≺", "succ": "≻",
