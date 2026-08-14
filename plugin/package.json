@@ -1,15 +1,11 @@
 {
   "name": "dsh-cazz-patent",
-  "description": "CazzPatent DeepSeek Harness plugin: deterministic tools wrapping the patent disclosure Python scripts",
+  "description": "CazzPatent DeepSeek Harness plugin: deterministic tools wrapping the patent disclosure Python scripts. Runtime deps (@deepseek-ai/dsh-tools, dsh-shell, cordis, schemastery) are provided by the dsh installation.",
   "version": "0.1.0",
   "type": "module",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./lib/index.d.ts",
-      "default": "./lib/index.js"
-    },
+    ".": "./lib/index.js",
     "./package.json": "./package.json"
   },
   "files": [
@@ -19,18 +15,11 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "tsdown",
-    "prepare": "tsdown"
-  },
-  "peerDependencies": {
-    "@deepseek-ai/cordis": "*",
-    "@deepseek-ai/dsh-shell": "*",
-    "@deepseek-ai/dsh-tools": "*",
-    "@deepseek-ai/schemastery": "*"
+    "build": "node esbuild.config.mjs",
+    "prepare": "node esbuild.config.mjs"
   },
   "devDependencies": {
-    "tsdown": "^0.22.2",
-    "typescript": "^6.0.3"
+    "esbuild": "^0.25.0"
   },
   "dsh": {
     "bundle": {

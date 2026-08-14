@@ -66,7 +66,7 @@ pip install pywin32
 
 ```sh
 pnpm install
-pnpm run build   # tsdown transpiles src/ -> lib/
+pnpm run build   # esbuild bundles src/ -> lib/
 ```
 
-The `prepare` script runs the same build automatically after a git install, so the bundle is self-contained without relying on a sibling monorepo checkout.
+The `prepare` script runs the same build automatically after a git install. `esbuild` is the only build dependency (no DSH-internal packages), so the build is fully self-contained; `@deepseek-ai/*` imports are marked external and resolve from the dsh installation at runtime.
