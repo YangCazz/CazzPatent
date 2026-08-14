@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (reserved for the future Cordis tool-plugin bundle)
+node_modules/
+
+# User-generated patent output — never commit real disclosures to the public repo
+专利输出/
+需求输出/
+
+# User examples / personal data
+examples/
+
+# Test / debug artifacts
+test_*.png
+test_*.mmd
+*_debug.*
+*_unknown_symbols.json
+/tmp/

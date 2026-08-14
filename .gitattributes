@@ -1,0 +1,11 @@
+# Normalize line endings; let git handle per-file binary detection.
+* text=auto
+
+# Text files: normalize to LF for cross-platform consistency.
+*.py  text eol=lf
+*.md  text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.txt text eol=lf

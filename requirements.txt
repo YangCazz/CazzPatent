@@ -1,0 +1,17 @@
+# Patent Agent Skill - Python Dependencies
+# Install: pip install -r requirements.txt
+
+# HTML/SVG diagram → PNG rendering (headless browser)
+playwright>=1.48
+
+# Markdown → Word conversion (CJK typography, inline formatting)
+python-docx>=1.1
+
+# HTML → PDF output (recommended, pure Python)
+weasyprint>=60.0
+
+# DOCX → PDF: Word COM automation (Windows)
+pywin32>=306; sys_platform == "win32"
+
+# Optional: richer Markdown parsing
+# markdown>=3.7
