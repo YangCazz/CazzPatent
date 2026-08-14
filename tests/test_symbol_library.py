@@ -57,3 +57,14 @@ def test_new_symbols_resolve_without_unknown():
     latex = r"$$\arg\min_x f(x) \lesssim y \triangleq z \Rightarrow w \hookrightarrow v \quad \iiint_\Omega \varphi \, dV \widehat{\theta} = \overline{\mu} \therefore$$"
     _sym_map, unknown = md_to_docx._build_symbol_map(latex)
     assert not unknown, f"unexpected unknown commands: {sorted(unknown)}"
+
+
+def test_math_font_maps_are_complete():
+    for name in ("_FRAKTUR", "_SCRIPT", "_SANS", "_MONO"):
+        font_map = getattr(md_to_docx, name)
+        assert len(font_map) == 52, f"{name} should map A-Z and a-z"
+        assert font_map["A"] != "A", f"{name} has identity mapping"
+    assert md_to_docx._FRAKTUR["C"] == chr(0x212D)
+    assert md_to_docx._SCRIPT["L"] == chr(0x2112)
+    assert md_to_docx._SANS["x"] == chr(0x1D5D1)
+    assert md_to_docx._MONO["X"] == chr(0x1D687)

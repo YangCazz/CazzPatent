@@ -312,6 +312,41 @@ _BB = {
     "1": "𝟙", "2": "𝟚", "0": "𝟘",
 }
 
+# ── 数学字母表字体映射（Unicode Mathematical Alphanumeric Symbols） ──
+def _contiguous_alnum(upper_start, lower_start):
+    """Build an A-Z/a-z -> Unicode math-alphanumeric map for contiguous ranges."""
+    m = {}
+    for i, ch in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
+        m[ch] = chr(upper_start + i)
+    for i, ch in enumerate("abcdefghijklmnopqrstuvwxyz"):
+        m[ch] = chr(lower_start + i)
+    return m
+
+# Fraktur：大写有预留码位缺口（C/H/I/R/Z 用 Letterlike 符号 ℭℌℑℜℨ）
+_FRAKTUR = _contiguous_alnum(0x1D504, 0x1D51E)
+_FRAKTUR.update({
+    "C": chr(0x212D), "H": chr(0x210C), "I": chr(0x2111),
+    "R": chr(0x211C), "Z": chr(0x2128),
+})
+
+# Script：大写有预留码位缺口（B/E/F/H/I/L/M/R 用 Letterlike 符号）
+_SCRIPT = _contiguous_alnum(0x1D49C, 0x1D4B6)
+_SCRIPT.update({
+    "B": chr(0x212C), "E": chr(0x2130), "F": chr(0x2131), "H": chr(0x210B),
+    "I": chr(0x2110), "L": chr(0x2112), "M": chr(0x2133), "R": chr(0x211B),
+})
+
+# Sans-serif / Monospace：连续区间，无缺口
+_SANS = _contiguous_alnum(0x1D5A0, 0x1D5BA)
+_MONO = _contiguous_alnum(0x1D670, 0x1D68A)
+
+_FONT_MAPS = {
+    "mathfrak": _FRAKTUR,
+    "mathscr": _SCRIPT,
+    "mathsf": _SANS,
+    "mathtt": _MONO,
+}
+
 
 def _latex_to_omml(latex: str) -> Optional[OxmlElement]:
     """Convert a LaTeX math expression to OMML.
@@ -535,6 +570,13 @@ def _parse_expr(tokens: list) -> list | None:
                 for c in arg_expr:
                     text = "".join(t.text or "" for t in c.findall(qn("m:t")))
                     mapped = "".join(_BB.get(ch, ch) for ch in text)
+                    result.append(_omml_run(mapped))
+            elif tok in ("mathfrak", "mathsf", "mathtt", "mathscr"):
+                # Unicode math alphanumeric font tables
+                font_map = _FONT_MAPS.get(tok, {})
+                for c in arg_expr:
+                    text = "".join(t.text or "" for t in c.findall(qn("m:t")))
+                    mapped = "".join(font_map.get(ch, ch) for ch in text)
                     result.append(_omml_run(mapped))
             else:
                 # \mathcal, \mathit: just pass through
