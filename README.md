@@ -32,6 +32,16 @@ customSkillDirs:
   - /absolute/path/to/CazzPatent
 ```
 
+## Plugin (Cordis tools)
+
+Phase 2 adds a Cordis plugin that wraps the Python scripts as five deterministic tools (`patent_md_to_docx`, `patent_docx_to_pdf`, `patent_render_diagram`, `patent_batch_diagrams`, `patent_html_to_pdf`). Install it as a bundle:
+
+```sh
+dsh plugin --profile demo add github:you/CazzPatent#<sha>
+```
+
+See [plugin/README.md](plugin/README.md) for the tool catalog, configuration, and build details.
+
 ## Python environment
 
 The skill's tooling is Python 3.10+:

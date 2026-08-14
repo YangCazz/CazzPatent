@@ -17,14 +17,19 @@ def _load(name: str, path: Path):
 
 batch = _load("batch_diagrams", SCRIPTS / "batch_diagrams.py")
 
+# 所有节点都放在 subgraph 内，gen_svg 才能对每个节点布局并渲染连线。
 MERMAID = """# 图1: 系统架构图
 
 graph TB
     subgraph 输入模块[输入模块]
         001[读取图像数据]
     end
-    001 --> 002[特征提取]
-    002 --> 003[输出结果]
+    subgraph 处理模块[处理模块]
+        002[特征提取]
+        003[输出结果]
+    end
+    001 --> 002
+    002 --> 003
 
 **图表说明**：测试图。
 """
@@ -39,12 +44,14 @@ def test_parse_md_extracts_nodes_and_edges(tmp_path):
     assert ("001", "002") in edges
     assert ("002", "003") in edges
     assert "输入模块" in sg_labels
+    assert "处理模块" in sg_labels
 
 
 def test_gen_svg_produces_svg(tmp_path):
     md = tmp_path / "图1.md"
     md.write_text(MERMAID, encoding="utf-8")
     nodes, edges, sg_labels, sg_nids, sg_order = batch.parse_md(md)
-    svg = batch.gen_svg(nodes, edges, sg_labels, sg_nids, sg_order, "系统架构图")
-    assert "<svg" in svg
-    assert "</svg>" in svg
+    svg, width, height = batch.gen_svg(nodes, edges, sg_labels, sg_nids, sg_order, "系统架构图")
+    assert width > 0 and height > 0
+    assert "<rect" in svg
+    assert "<text" in svg

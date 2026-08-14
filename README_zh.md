@@ -32,6 +32,16 @@ customSkillDirs:
   - /absolute/path/to/CazzPatent
 ```
 
+## 插件（Cordis 工具）
+
+Phase 2 新增一个 Cordis 插件，把 Python 脚本包装成五个确定性工具（`patent_md_to_docx`、`patent_docx_to_pdf`、`patent_render_diagram`、`patent_batch_diagrams`、`patent_html_to_pdf`）。作为 bundle 安装：
+
+```sh
+dsh plugin --profile demo add github:you/CazzPatent#<sha>
+```
+
+工具清单、配置与构建详见 [plugin/README.md](plugin/README.md)。
+
 ## Python 环境
 
 技能工具链为 Python 3.10+：

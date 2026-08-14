@@ -1,0 +1,14 @@
+# CazzPatent tool bundle: inserts the plugin row into the composition.
+# Config defaults come from the plugin's Config schema; override here or in a
+# profile's cordis.patch.yml. Example:
+#
+# - insert:
+#     - id: cazz-patent-tools
+#       name: dsh-cazz-patent
+#       config:
+#         pythonPath: D:/miniforge3/envs/patent/python.exe
+#         scriptsDir: /absolute/path/to/CazzPatent/cazz-patent/scripts
+#         defaultTimeoutMs: 300000
+- insert:
+    - id: cazz-patent-tools
+      name: dsh-cazz-patent
