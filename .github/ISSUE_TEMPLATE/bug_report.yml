@@ -1,0 +1,36 @@
+name: Bug 报告
+description: 报告一个 bug
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "感谢报告 bug！请填写以下信息，帮助我们快速定位问题。"
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 清晰描述发生了什么
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 如何复现该问题
+      placeholder: "1. ...
+2. ...
+3. ..."
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: Python 版本 / 操作系统 / 相关脚本
+      placeholder: "Python 3.11, Windows 11, md_to_docx.py"
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 你期望发生什么
