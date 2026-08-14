@@ -88,7 +88,7 @@ pip install pywin32
 
 ### LaTeX → OMML 公式引擎
 
-DOCX 引擎（`scripts/md_to_docx.py`）把 LaTeX 直接转换为 **Word 原生 OMML 方程**——不用 MathML、不嵌图片。每个公式渲染为可编辑的高保真 Word 方程：希腊字母及变体、大型运算符、分式/根式、关系符、集合与逻辑、箭头、重音、`\mathbb`/`\mathbf`/`\mathcal`、6 种矩阵定界符、`\underbrace`/`\overbrace`、文本运算符——**170+ 符号**。
+DOCX 引擎（`scripts/md_to_docx.py`）把 LaTeX 直接转换为 **Word 原生 OMML 方程**——不用 MathML、不嵌图片。每个公式渲染为可编辑的高保真 Word 方程：希腊字母及变体、大型运算符、分式/根式、关系符、集合与逻辑、箭头、重音、`\mathbb`/`\mathbf`/`\mathcal`、6 种矩阵定界符、`\underbrace`/`\overbrace`、文本运算符——**350+ 符号**。
 
 ### 附图管线
 

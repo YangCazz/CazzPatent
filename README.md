@@ -88,7 +88,7 @@ Output directories (`专利输出/`, `需求输出/`) are created under your wor
 
 ### LaTeX → OMML equation engine
 
-The DOCX engine (`scripts/md_to_docx.py`) converts LaTeX directly into **Word-native OMML equations** — no MathML, no images. Every formula renders as an editable, high-fidelity Word equation: Greek & variants, large operators, fractions/radicals, relations, sets & logic, arrows, accents, `\mathbb`/`\mathbf`/`\mathcal`, 6 matrix delimiters, `\underbrace`/`\overbrace`, and text operators — **170+ symbols**.
+The DOCX engine (`scripts/md_to_docx.py`) converts LaTeX directly into **Word-native OMML equations** — no MathML, no images. Every formula renders as an editable, high-fidelity Word equation: Greek & variants, large operators, fractions/radicals, relations, sets & logic, arrows, accents, `\mathbb`/`\mathbf`/`\mathcal`, 6 matrix delimiters, `\underbrace`/`\overbrace`, and text operators — **350+ symbols**.
 
 ### Diagram pipeline
 

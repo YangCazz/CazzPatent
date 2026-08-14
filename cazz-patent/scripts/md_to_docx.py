@@ -202,6 +202,78 @@ _SYMBOLS = {
 }
 
 
+# ── 补充：完整符号库（常用数学/物理/统计符号与别名） ──
+_SYMBOLS.update({
+    # Greek variants (补充)
+    "varkappa": "ϰ", "varpi": "ϖ",
+    # Binary operators (补充)
+    "uplus": "⊎", "amalg": "⨿", "sqsubset": "⊏", "sqsupset": "⊐",
+    "sqsubseteq": "⊑", "sqsupseteq": "⊒", "diamond": "⋄", "lozenge": "◊",
+    "blacklozenge": "⧫", "triangleleft": "◁", "triangleright": "▷",
+    "lhd": "⊲", "rhd": "⊳", "unlhd": "⊴", "unrhd": "⊵",
+    "boxplus": "⊞", "boxminus": "⊟", "boxtimes": "⊠", "boxdot": "⊡",
+    "circledast": "⊛", "circledcirc": "⊚", "circleddash": "⊝",
+    "ltimes": "⋉", "rtimes": "⋊", "leftthreetimes": "⋋", "rightthreetimes": "⋌",
+    "curlyvee": "⋎", "curlywedge": "⋏", "intercal": "⊺",
+    "dagger": "†", "ddagger": "‡", "Cap": "⋒", "Cup": "⋓",
+    "barwedge": "⊼", "veebar": "⊻", "doublebarwedge": "⩞",
+    "circledS": "Ⓢ", "smallsetminus": "∖",
+    # Relations (补充)
+    "lesssim": "≲", "gtrsim": "≳", "lessapprox": "⪅", "gtrapprox": "⪆",
+    "lessgtr": "≶", "gtrless": "≷", "lesseqgtr": "⋚", "gtreqless": "⋛",
+    "lesseqqgtr": "⪋", "gtreqqless": "⪌", "triangleq": "≜", "approxeq": "≊",
+    "circeq": "≗", "bumpeq": "≏", "Bumpeq": "≎", "doteqdot": "≑",
+    "fallingdotseq": "≒", "risingdotseq": "≓", "asymp": "≍",
+    "bowtie": "⋈", "Join": "⋈", "vdash": "⊢", "dashv": "⊣",
+    "models": "⊨", "vDash": "⊨", "Vdash": "⊩", "Vvdash": "⊪",
+    "nless": "≮", "ngtr": "≯", "nleq": "≰", "ngeq": "≱",
+    "lneq": "⪇", "gneq": "⪈", "lneqq": "≨", "gneqq": "≩",
+    "nsim": "≁", "ncong": "≇", "napprox": "≉", "nparallel": "∦",
+    "varsubsetneq": "⊊", "varsupsetneq": "⊋", "subsetneqq": "⫋", "supsetneqq": "⫌",
+    "nsubseteq": "⊈", "nsupseteq": "⊉", "subseteqq": "⫅", "supseteqq": "⫆",
+    "nprec": "⊀", "nsucc": "⊁", "precnsim": "⋨", "succnsim": "⋩",
+    "precnapprox": "⪹", "succnapprox": "⪺", "smile": "⌣", "frown": "⌢",
+    "therefore": "∴", "because": "∵", "varpropto": "∝",
+    "shortmid": "∣", "shortparallel": "∥", "between": "≬", "pitchfork": "⋔",
+    "backepsilon": "϶",
+    # Set relations (补充)
+    "Subset": "⋐", "Supset": "⋑",
+    # Arrows (补充)
+    "updownarrow": "↕", "Updownarrow": "⇕", "nearrow": "↗", "searrow": "↘",
+    "swarrow": "↙", "nwarrow": "↖", "hookrightarrow": "↪", "hookleftarrow": "↩",
+    "rightharpoonup": "⇀", "rightharpoondown": "⇁", "leftharpoonup": "↼", "leftharpoondown": "↽",
+    "rightleftharpoons": "⇌", "leftrightharpoons": "⇋", "twoheadrightarrow": "↠", "twoheadleftarrow": "↞",
+    "dashrightarrow": "⇢", "dashleftarrow": "⇠", "leftrightsquigarrow": "↭",
+    "rightsquigarrow": "⇝", "leadsto": "⇝", "curvearrowleft": "↶", "curvearrowright": "↷",
+    "circlearrowleft": "↺", "circlearrowright": "↻", "looparrowleft": "↫", "looparrowright": "↬",
+    "Lsh": "↰", "Rsh": "↱", "multimap": "⊸", "nrightarrow": "↛", "nleftarrow": "↚",
+    "nRightarrow": "⇏", "nLeftarrow": "⇍", "nleftrightarrow": "↮", "upuparrows": "⇈", "downdownarrows": "⇊",
+    # Miscellaneous math (补充)
+    "iiint": "∭", "iiiint": "⨌", "oint": "∮", "oiint": "∯", "oiiint": "∰",
+    "bigcap": "⋂", "bigsqcup": "⨆", "bigvee": "⋁", "bigwedge": "⋀",
+    "bigoplus": "⨁", "bigotimes": "⨂", "bigodot": "⨀", "coprod": "∐",
+    "blacksquare": "■", "blacktriangle": "▲", "blacktriangledown": "▼",
+    "clubsuit": "♣", "diamondsuit": "♢", "heartsuit": "♡", "spadesuit": "♠",
+    "flat": "♭", "natural": "♮", "sharp": "♯", "sphericalangle": "∢",
+    "ulcorner": "⌜", "urcorner": "⌝", "llcorner": "⌞", "lrcorner": "⌟",
+    "backslash": "∖", "eth": "ð", "Finv": "Ⅎ", "Game": "⅁", "Bbbk": "𝕜",
+    "diagdown": "╲", "diagup": "╱", "checkmark": "✓", "maltese": "✠",
+    # Delimiters (补充)
+    "lgroup": "⟮", "rgroup": "⟯",
+})
+
+# ── 补充：结构命令（函数名/重音/字体，交给 _parse_expr 处理） ──
+_SKIP_COMMANDS.update({
+    "mathfrak", "mathsf", "mathtt", "mathscr", "bm",
+    "widehat", "widetilde", "check", "breve", "acute", "grave", "mathring",
+    "overline", "underline",
+    "liminf", "limsup", "arcsin", "arccos", "arctan",
+    "sinh", "cosh", "tanh", "coth", "csc", "sec", "cot", "deg", "lg", "hom",
+    "sgn", "diag", "tr", "trace", "rank", "span", "erf", "erfc", "adj",
+    "injlim", "projlim", "varinjlim", "varprojlim", "varliminf", "varlimsup",
+})
+
+
 def _omml_elem(tag: str, **attrs) -> OxmlElement:
     """Create an OMML element."""
     return OxmlElement(f"m:{tag}", attrs={})
@@ -446,10 +518,10 @@ def _parse_expr(tokens: list) -> list | None:
             result.append(nary)
             i += 1
             continue
-        elif tok in ("mathbb", "mathbf", "boldsymbol", "mathcal", "mathit") and is_cmd:
+        elif tok in ("mathbb", "mathbf", "boldsymbol", "mathcal", "mathit", "mathfrak", "mathsf", "mathtt", "mathscr", "bm") and is_cmd:
             # Styled text commands: \mathbb{R}, \mathbf{v}, \boldsymbol{p}
             arg_expr, consumed = _parse_arg(tokens, i + 1)
-            if tok == "mathbf" or tok == "boldsymbol":
+            if tok in ("mathbf", "boldsymbol", "bm"):
                 # Bold: wrap each run with bold styling
                 for c in arg_expr:
                     if c.tag == qn("m:r"):
@@ -659,10 +731,45 @@ def _parse_expr(tokens: list) -> list | None:
             result.append(acc)
             i = consumed + 1
             continue
+        elif tok in ("overline", "underline") and is_cmd:
+            # \overline{...} / \underline{...} — wide bar over/under
+            arg_expr, consumed = _parse_arg(tokens, i + 1)
+            bar_el = _omml_elem("bar")
+            bar_pr = _omml_elem("barPr")
+            pos_el = _omml_elem("pos")
+            pos_el.set(qn("m:val"), "top" if tok == "overline" else "bot")
+            bar_pr.append(pos_el)
+            bar_el.append(bar_pr)
+            e = _omml_elem("e")
+            for c in arg_expr:
+                _append_to(e, c)
+            bar_el.append(e)
+            result.append(bar_el)
+            i = consumed + 1
+            continue
+        elif tok in ("widehat", "widetilde", "check", "breve", "acute", "grave", "mathring") and is_cmd:
+            _ACCENTS2 = {"widehat": "̂", "widetilde": "̃", "check": "̌", "breve": "̆", "acute": "́", "grave": "̀", "mathring": "̊"}
+            arg_expr, consumed = _parse_arg(tokens, i + 1)
+            acc = _omml_elem("acc")
+            acc_pr = _omml_elem("accPr")
+            chr_el = _omml_elem("chr")
+            chr_el.set(qn("m:val"), _ACCENTS2.get(tok, "̇"))
+            acc_pr.append(chr_el)
+            acc.append(acc_pr)
+            e = _omml_elem("e")
+            for c in arg_expr:
+                _append_to(e, c)
+            acc.append(e)
+            result.append(acc)
+            i = consumed + 1
+            continue
         elif tok in ("sin", "cos", "tan", "log", "ln", "exp",
-                     "lim", "max", "min", "sup", "inf", "det",
-                     "dim", "gcd", "ker", "Pr", "argmax", "argmin",
-                     "arg") and is_cmd:
+                     "lim", "liminf", "limsup", "max", "min", "sup", "inf", "det",
+                     "dim", "gcd", "ker", "Pr", "argmax", "argmin", "arg",
+                     "arcsin", "arccos", "arctan", "sinh", "cosh", "tanh", "coth",
+                     "csc", "sec", "cot", "deg", "lg", "hom",
+                     "sgn", "diag", "tr", "trace", "rank", "span", "erf", "erfc", "adj",
+                     "injlim", "projlim", "varinjlim", "varprojlim", "varliminf", "varlimsup") and is_cmd:
             result.append(_omml_run(tok, normal=True))
             i += 1
             continue
