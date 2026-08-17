@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="assets/logo.png" alt="CazzPatent logo" width="120">
+
 # CazzPatent
 
 **AI patent disclosure drafting assistant** — a DeepSeek Harness plugin that turns technical proposals into submission-ready patent disclosures.
@@ -11,6 +13,9 @@
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-2563eb)](https://github.com/deepseek-ai/deepseek-harness)
 [![CI](https://github.com/YangCazz/CazzPatent/actions/workflows/ci.yml/badge.svg)](https://github.com/YangCazz/CazzPatent/actions/workflows/ci.yml)
 [![LaTeX → OMML](https://img.shields.io/badge/LaTeX%E2%86%92OMML-350%2B_symbols-ef4444)](.)
+
+<br>
+<img src="assets/banner.png" alt="CazzPatent banner" width="900">
 
 </div>
 

@@ -1,12 +1,12 @@
 # assets/ — 品牌图片
 
-本目录存放仓库的品牌图片。当前是 **占位图**，请用 AI 生成的正式图替换同名文件（保持文件名与尺寸不变）。
+本目录存放仓库的品牌图片（已用 AI 生成的正式图替换占位图）。
 
 | 文件 | 尺寸 | 用途 | 状态 |
 |------|------|------|------|
-| logo.png | 1024 × 1024（1:1） | README 头部图标 + GitHub 社交预览头像 | 占位 |
-| banner.png | 1500 × 500（3:1） | README 顶部横幅 | 占位 |
-| social-preview.png | 1280 × 640（2:1） | 链接分享预览图（GitHub Settings → Social preview） | 占位 |
+| logo.png | 1024 × 1024（1:1） | README 头部图标 + GitHub 社交预览头像 | 已就绪 |
+| banner.png | 1500 × 500（3:1） | README 顶部横幅 | 已就绪 |
+| social-preview.png | 1280 × 640（2:1） | 链接分享预览图（GitHub Settings → Social preview） | 已就绪 |
 
 ---
 
